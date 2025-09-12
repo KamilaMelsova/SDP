@@ -3,7 +3,7 @@ public class Pizza {
     private String crust;
     private boolean cheese;
     private boolean pepperoni;
-    private boolean mushroom;
+    private boolean mushroom;//class with pizza characteristics
 
     private Pizza(PizzaBuilder builder){
         this.size = builder.size;
@@ -11,8 +11,8 @@ public class Pizza {
         this.cheese = builder.cheese;
         this.pepperoni = builder.pepperoni;
         this.mushroom = builder.mushroom;
-    }
-    @Override
+    }//pizza constructor. The builder passes all selected parameters
+    @Override//method that turns a pizza object into a convenient one
     public String toString(){
         return "Pizza [size=" + size
                 + ", crust=" + crust
@@ -50,4 +50,4 @@ public class Pizza {
             return new Pizza(this);
         }
     }
-}
+}//Builder constructor.methods for stepbystep selection of pizza parameters
